@@ -38,12 +38,12 @@ jobs:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
         run: echo "$MATRIX_CONTEXT"
 
-      - name: Checkout source
-        uses: actions/checkout@master
-      - name: Use Golang
-        uses: actions/setup-go@v1
-        with:
-          go-version: "1.13.x"
+      #- name: Checkout source
+      #  uses: actions/checkout@master
+      #- name: Use Golang
+      #  uses: actions/setup-go@v1
+      #  with:
+      #    go-version: "1.13.x"
       - name: Build normal
         run: |
           touch normal-windows-x64.exe
